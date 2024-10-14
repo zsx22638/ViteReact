@@ -1,0 +1,6 @@
+/* Change.module.css */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: orange; /* 修正此处 */
+}

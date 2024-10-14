@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单独使用redux</title>
+</head>
+<body>
+<button id="btn1">点击+1</button>
+<button id="btn2">点击-1</button>
+<span id="num">0</span>
+<script src="../../libs/redux.min.js"></script>
+<script>
+
+    //定义reducer
+    function reducer(state = {count:0}, action) {
+        switch (action.type) {
+            case 'ADD':
+                return {count: state.count + 1};
+            case 'MINUS':
+                return {count: state.count - 1};
+            default:
+                return state;
+        }
+    }
+    //创建store
+    const store = Redux.createStore(reducer);
+    //订阅store的更新
+    store.subscribe(() => {
+        console.log(store.getState());
+        document.getElementById('num').innerHTML = store.getState().count;
+    });
+    const btn1 = document.getElementById('btn1');
+    btn1.onclick = function () {
+        store.dispatch({type: 'ADD'});
+    }
+    const btn2 = document.getElementById('btn2');
+    btn2.onclick = function () {
+        store.dispatch({type: 'MINUS'});
+    }
+</script>
+
+
+</body>
+</html>

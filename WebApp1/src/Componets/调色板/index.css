@@ -1,0 +1,12 @@
+.disColor {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.container {
+    width: 500px;
+    margin: 0 auto;
+    background-color: #eee;
+}
