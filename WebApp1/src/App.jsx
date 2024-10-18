@@ -7,6 +7,7 @@ import DataTransfer from "./Componets/子传父/Child.jsx";
 import TestBtn from "./Componets/封装button组件/TestBtn.jsx";
 import FormTest from "./Componets/Form元素获取/FormTest.jsx";
 import ColorBoard from "./Componets/调色板/index.jsx";
+import ReduxTest from "./Componets/redux测试/index.jsx";
 
 export default function App() {
     return (
@@ -37,7 +38,9 @@ export default function App() {
 
             {/*<FormTest />*/}
 
-            <ColorBoard />
+            {/*<ColorBoard />*/}
+
+            <ReduxTest />
         </div>
     );
 }
